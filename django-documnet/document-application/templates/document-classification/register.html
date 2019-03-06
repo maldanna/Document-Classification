@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+   #a{
+
+
+  width:600px;
+  height:690px;
+  background-color: Moccasin;
+    font-size: 16px;
+    color:green;
+    margin-left: 330px;
+    margin-right:100px;
+    margin-top:10px;
+     border-radius: 25px;
+     border: 2px solid orange;
+
+     padding: 15px 20px 55px 45px;"
+
+
+
+
+
+   }
+
+      body {
+        border-top: 4px solid #E47541;
+        /*min-height: 5000px;*/
+        /*min-width: 5000px;*/
+        background: url('{% static "okcoolapp1/img/sea.jpg" %}') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: conver;
+        background-size: cover;
+        /*background-image: url('{% static "img/beach.jpg" %}');*/
+        /*background-image:url('https://lh4.googleusercontent.com/-FsgMNhfQLSg/AAAAAAAAAAI/AAAAAAAAaRY/3VnF3vSuWKk/photo.jpg');*/
+         }
+     /*background-repeat: repeat-x;*/
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-lightgreen" style="height:40px">
+    <div class="d-flex flex-grow-1">
+
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+
+            <li class="nav-item">
+                <a href="{% url 'okcoolapp1:home' %}" class="nav-link">
+                    <b style="color:orange"> <- GoBack                   </b></a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+
+
+<div class="content-section" id="a">
+        <form method="POST" action="{% url 'okcoolapp1:register' %}">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-1">Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-1">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-1" href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+
+
+<div style="height=300px; width:1000px; color:orange;     margin-left: 480px;
+">
+
+
+    <br>
+    <br>
+   <h1>Hello cool!</h1>
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

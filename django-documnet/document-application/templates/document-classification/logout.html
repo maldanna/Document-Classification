@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+      body {
+        border-top: 4px solid #E47541;
+
+        background: url('{% static "okcoolapp1/img/plain.jpg" %}') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: conver;
+        background-size: cover;
+
+      }
+
+
+</style>
+
+</head>
+<body >
+
+    <h2 style="color:green;margin-left:300px;margin-top:150px;">
+        You have been logged out</h2>
+    <div  >
+        <h5> <a href="{% url 'login' %}" style="color:blue;margin-left:380px;margin-top:200px;">Log In Again!</a></h5>
+    </div>
+
+</body>
+</html>

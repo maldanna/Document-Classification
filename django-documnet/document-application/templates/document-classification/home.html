@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <style>
+      body {
+        border-top: 4px solid #E47541;
+        /*min-height: 5000px;*/
+        /*min-width: 5000px;*/
+        background: url('{% static "okcoolapp1/img/aaa.jpg" %}') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: conver;
+        background-size: cover;
+        /*background-image: url('{% static "img/beach.jpg" %}');*/
+        /*background-image:url('https://lh4.googleusercontent.com/-FsgMNhfQLSg/AAAAAAAAAAI/AAAAAAAAaRY/3VnF3vSuWKk/photo.jpg');*/
+         }
+     /*background-repeat: repeat-x;*/
+.a{
+
+  margin-top: 150px;
+  margin-bottom: 500px;
+  margin-right: 300px;
+  margin-left: 300px;
+  color: rgb(171, 213, 192);
+  border-radius: 25px;
+  border: 2px solid orange;
+   padding: 15px 20px 55px 15px;"
+
+
+}
+.b{
+
+  border-radius: 25px;
+  width:350px;
+  border: 2px solid green;
+  padding: 20px;
+  margin-top: 100px;
+  background-color:Chocolate;
+
+  margin-left: 450px;
+  color: rgb(171, 213, 192);
+
+}
+    </style>
+</head>
+
+
+
+<body class="tdStyle" >
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success" style="height:40px">
+    <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+        <a class="navbar-brand" href="#" style="color:orange">
+            Document-classification
+        </a>
+
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+                <a href="{% url 'okcoolapp1:about' %}" class="nav-link"><b style="color:orange">About-us</b></a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'okcoolapp1:register' %}" class="nav-link">
+                    <b style="color:orange"> signup </b></a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'login' %}" class="nav-link"><b style="color:orange">Login </b></a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+ <div class="b" >
+     <h1>Welcome & try-it</h1>
+
+  </div>
+
+
+<div class="a">
+    <pre><h4 style="color:orange">                  purpose:   </h4></pre>
+
+<p>
+Internet traffic and data is on an exponential rise these days. People are
+switching to faster ways of browsing the web aided faster proccessing speeds and
+Internet. Often articles on the internet are too long and cumbersome to read and
+comprehend. Using classification techniques of machine learning, it is possible to
+build a system which can simplify this process. The system will take as input a long
+paragraph of text and predict what this text is about i.e give an overview of it, thereby
+saving time of the users.
+
+</p>
+
+</div>
+
+
+
+</body>
+</html>
